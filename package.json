@@ -18,7 +18,8 @@
   "homepage": "https://github.com/bdcry/frontend-project-44#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "eslint-plugin-jest": "^27.6.3",
