@@ -8,3 +8,6 @@
 
 ### Brain Games - Calculator
 [![asciicast](https://asciinema.org/a/8zEomPRvwRjxIb7wdurOBNICL.svg)](https://asciinema.org/a/8zEomPRvwRjxIb7wdurOBNICL)
+
+### Brain Games - Greatest Common Divisor
+[![asciicast](https://asciinema.org/a/sPI2ae0wm9ScOTSo85T1uLv0N.svg)](https://asciinema.org/a/sPI2ae0wm9ScOTSo85T1uLv0N)
