@@ -29,11 +29,11 @@ make install
 # Игры
 После установки игры вызываются следующими командами:
 <dl>
-    <dt style="font-weight: bold;">brain-even</dt><dd>Определение четности показываемого числа.</dd>
-    <dt style="font-weight: bold;">brain-calc</dt><dd>Вычисление результата случайных арифметических операций.</dd>
-    <dt style="font-weight: bold;">brain-gcd</dt><dd>Вычисление наибольшего общего делителя двух чисел.</dd>
-    <dt style="font-weight: bold;">brain-progression</dt><dd>Определение пропущенного члена арифметической прогрессии.</dd>
-    <dt style="font-weight: bold;">brain-prime</dt><dd>Определение того, простое ли число.</dd>
+    <dt style="font-weight: bold;">Brain Games - Even Numbers (brain-even)</dt><dd>Определение четности показываемого числа.</dd>
+    <dt style="font-weight: bold;">Brain Games - Calculator (brain-calc)</dt><dd>Вычисление результата случайных арифметических операций.</dd>
+    <dt style="font-weight: bold;">Brain Games - Greatest Common Divisor (brain-gcd)</dt><dd>Вычисление наибольшего общего делителя двух чисел.</dd>
+    <dt style="font-weight: bold;">Brain Games - Arithmetic Progression (brain-progression)</dt><dd>Определение пропущенного члена арифметической прогрессии.</dd>
+    <dt style="font-weight: bold;">Brain Games - Prime Numbers (brain-prime)</dt><dd>Определение того, простое ли число.</dd>
 </dl>
 
 ## Демонстация игр
