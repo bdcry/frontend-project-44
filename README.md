@@ -11,3 +11,6 @@
 
 ### Brain Games - Greatest Common Divisor
 [![asciicast](https://asciinema.org/a/sPI2ae0wm9ScOTSo85T1uLv0N.svg)](https://asciinema.org/a/sPI2ae0wm9ScOTSo85T1uLv0N)
+
+### Brain Games - Arithmetic Progression
+[![asciicast](https://asciinema.org/a/hAbNBMbBkQBPcyZR2nckiJZAm.svg)](https://asciinema.org/a/hAbNBMbBkQBPcyZR2nckiJZAm)
