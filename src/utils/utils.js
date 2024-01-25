@@ -20,7 +20,7 @@ export const showGameRules = (gameType) => {
 export const checkAnswer = (userAnswer, correctAnswer, userName, isNumeric = false) => {
     const parsedUserAnswer = isNumeric ? parseInt(userAnswer, 10) : userAnswer;
     if (parsedUserAnswer !== correctAnswer) {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}`);
+        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}!`);
         return false;
     }
     console.log('Correct!');
