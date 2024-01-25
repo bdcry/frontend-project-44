@@ -78,7 +78,7 @@ export const generateProgression = (start, step, length, hiddenNumberIndex) => {
     const progression = [];
     for (let i = 0; i < length; i += 1) {
         if (i === hiddenNumberIndex) {
-            progression.push('...');
+            progression.push('..');
         } else {
             progression.push(start + i * step);
         }
