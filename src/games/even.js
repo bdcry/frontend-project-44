@@ -6,11 +6,12 @@ import {
     roundsCount,
     checkAnswer,
     congratulateUser,
+    showGameRules,
 } from '../utils/utils.js';
 
 const playEvenGame = () => {
     const userName = greet();
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    showGameRules('even');
 
     for (let i = 0; i < roundsCount; i += 1) {
         const question = getRandomNumber(100);
