@@ -29,7 +29,7 @@ const playProgressionGame = () => {
       hiddenNumberIndex,
     );
 
-    return { question: `Question: ${question}`, answer: correctAnswer };
+    return { question: `${question}`, answer: correctAnswer };
   };
 
   runGame(gameRules, getQuestionAndAnswer);

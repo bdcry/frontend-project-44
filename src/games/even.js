@@ -10,7 +10,7 @@ const playEvenGame = () => {
     const question = getRandomNumber(100);
     const correctAnswer = isEven(question) ? 'yes' : 'no';
     // Показываем вопрос и проверяем ответ пользователя
-    return { question: `Question: ${question}`, answer: correctAnswer };
+    return { question: `${question}`, answer: correctAnswer };
   };
 
   runGame(gameRules, getQuestionAndAnswer);
