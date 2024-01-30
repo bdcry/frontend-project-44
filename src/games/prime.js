@@ -6,12 +6,13 @@ import {
   checkAnswer,
   congratulateUser,
   getRandomNumber,
-  showGameRules,
 } from '../utils/utils.js';
+
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const playPrimeGame = () => {
   const userName = greet();
-  showGameRules('prime');
+  console.log(gameRules);
 
   for (let i = 0; i < roundsCount; i += 1) {
     const question = getRandomNumber(100);

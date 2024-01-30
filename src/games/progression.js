@@ -6,12 +6,13 @@ import {
   getRandomNumber,
   checkAnswer,
   congratulateUser,
-  showGameRules,
 } from '../utils/utils.js';
+
+const gameRules = 'What number is missing in the progression?';
 
 const playProgressionGame = () => {
   const userName = greet();
-  showGameRules('progression');
+  console.log(gameRules);
 
   for (let i = 0; i < roundsCount; i += 1) {
     const progressionStart = getRandomNumber(10) + 1; // Начальное число прогрессии

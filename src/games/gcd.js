@@ -6,12 +6,13 @@ import {
   getRandomNumber,
   congratulateUser,
   checkAnswer,
-  showGameRules,
 } from '../utils/utils.js';
+
+const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const playGCDGame = () => {
   const userName = greet();
-  showGameRules('gcd');
+  console.log(gameRules);
 
   for (let i = 0; i < roundsCount; i += 1) {
     const num1 = getRandomNumber(100);

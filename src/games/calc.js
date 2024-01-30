@@ -6,12 +6,13 @@ import {
   checkAnswer,
   roundsCount,
   congratulateUser,
-  showGameRules,
 } from '../utils/utils.js';
+
+const gameRules = 'What is the result of the expression?';
 
 const playCalcGame = () => {
   const userName = greet();
-  showGameRules('calc');
+  console.log(gameRules);
 
   // Создаем операторы
   const operations = ['+', '-', '*'];
