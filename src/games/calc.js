@@ -1,35 +1,43 @@
-import readlineSync from 'readline-sync';
-import greet from '../utils/cli.js';
-import {
-  getRandomNumber,
-  calculate,
-  checkAnswer,
-  roundsCount,
-  congratulateUser,
-} from '../utils/utils.js';
+import { getRandomNumber, runGame } from '../utils/utils.js';
+
+// Логика калькулятора
+const calculate = (num1, num2, operation) => {
+  switch (operation) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return 'Something went wrong. Try again, bro';
+  }
+};
 
 const gameRules = 'What is the result of the expression?';
 
 const playCalcGame = () => {
-  const userName = greet();
-  console.log(gameRules);
+  const getQuestionAndAnswer = () => {
+    // Создаем операторы
+    const operations = ['+', '-', '*'];
 
-  // Создаем операторы
-  const operations = ['+', '-', '*'];
-
-  for (let i = 0; i < roundsCount; i += 1) {
     const num1 = getRandomNumber(10);
     const num2 = getRandomNumber(10);
-    const operation = operations[i];
-    console.log(`Question: ${num1} ${operation} ${num2}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = calculate(num1, num2, operation);
 
-    if (!checkAnswer(userAnswer, correctAnswer, userName, true)) {
-      return;
-    }
-  }
-  congratulateUser(userName);
+    // Генерируем случайный оператор
+    const operation = operations[getRandomNumber(operations.length)];
+    const question = `${num1} ${operation} ${num2}`;
+
+    // Результат этой операции преобразуется в строку с помощью функции String(),
+    // так как ответ пользователя, который будет сравниваться с этим результатом,
+    // равен строковому значению, то есть String
+    const answer = String(calculate(num1, num2, operation));
+
+    // Показываем вопрос и проверяем ответ пользователя
+    return { question, answer };
+  };
+
+  runGame(gameRules, getQuestionAndAnswer);
 };
 
 export default playCalcGame;

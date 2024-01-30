@@ -1,30 +1,19 @@
-import readlineSync from 'readline-sync';
-import greet from '../utils/cli.js';
-import {
-  getRandomNumber,
-  isEven,
-  roundsCount,
-  checkAnswer,
-  congratulateUser,
-} from '../utils/utils.js';
+import { getRandomNumber, runGame } from '../utils/utils.js';
+
+// Проверяем, четное ли число
+const isEven = (num) => num % 2 === 0;
 
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const playEvenGame = () => {
-  const userName = greet();
-  console.log(gameRules);
-
-  for (let i = 0; i < roundsCount; i += 1) {
+  const getQuestionAndAnswer = () => {
     const question = getRandomNumber(100);
-    console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = isEven(question) ? 'yes' : 'no';
+    // Показываем вопрос и проверяем ответ пользователя
+    return { question: `Question: ${question}`, answer: correctAnswer };
+  };
 
-    if (!checkAnswer(userAnswer, correctAnswer, userName)) {
-      return;
-    }
-  }
-  congratulateUser(userName);
+  runGame(gameRules, getQuestionAndAnswer);
 };
 
 export default playEvenGame;

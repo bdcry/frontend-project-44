@@ -1,31 +1,29 @@
-import readlineSync from 'readline-sync';
-import greet from '../utils/cli.js';
-import {
-  isPrime,
-  roundsCount,
-  checkAnswer,
-  congratulateUser,
-  getRandomNumber,
-} from '../utils/utils.js';
+import { getRandomNumber, runGame } from '../utils/utils.js';
+
+// Проверяем, является ли число простым
+const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const playPrimeGame = () => {
-  const userName = greet();
-  console.log(gameRules);
-
-  for (let i = 0; i < roundsCount; i += 1) {
+  const getQuestionAndAnswer = () => {
     const question = getRandomNumber(100);
-
-    console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-    if (!checkAnswer(userAnswer, correctAnswer, userName)) {
-      return;
-    }
-  }
-  congratulateUser(userName);
+    // Показываем вопрос и проверяем ответ пользователя
+    return { question: `Question: ${question}`, answer: correctAnswer };
+  };
+  runGame(gameRules, getQuestionAndAnswer);
 };
 
 export default playPrimeGame;
